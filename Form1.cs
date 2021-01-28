@@ -33,6 +33,7 @@ namespace UDPChat
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            // Control.CheckForIllegalCrossThreadCalls = false;
             Thread recvThread = new Thread(StartRecv);
             recvThread.Start();
         }
