@@ -37,7 +37,14 @@ namespace UDPChat
 
         public void SendData(IPEndPoint hostRecv, byte[] data)
         {
-            udpSendSock.Send(data, data.Length, hostRecv);
+            try
+            {
+                udpSendSock.Send(data, data.Length, hostRecv);
+            }
+            catch
+            {
+                ;
+            }
         }
     }
 
